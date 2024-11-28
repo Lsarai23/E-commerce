@@ -7,3 +7,4 @@ renderizarCatalogo();
 inicializarCarrinho();
 renderizarCarrinho();
 testeEsconder();
+//This commit is just to test GitHub stats 
