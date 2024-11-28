@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body class="bg-slate-200">
+
+    <section id="carrinho" class=" z-50 fixed top-0 right-[-360px] h-screen bg-orange-700 w-[360px] duration-200 flex flex-col justify-between p-4">
+      <div id="cabecalho-carrinho" class="flex justify-between m-4">
+        <p>Meu carrinho</p>
+        <button><i id="fechar-carrinho" class="fa-regular fa-circle-xmark"></i></button>
+      </div>
+    
+      <section id="produtos-carrinho" class="overflow-y-auto h-3/5 flex flex-col gap-2"></section>
+
+    <p id="preco-total" class="text-green-600 text-xl bg-orange-100"></p>
+    <button id="finalizar-compra" class="bg-amber-500 hover:bg-slate-200"> Finalizar Compra</button>
+  </section>
+
+   <header class="flex bg-orange-600 shadow-orange-400 shadow-lg p-8 justify-between sticky top-0 z-10">
+    <img class="h-32" src="./assets/img/logo.png" alt="logo">
+    <div class="flex gap-2 items-end">
+      <a href="/pedidos.html">
+      <button id="historico" class="mx-2"><i class="fa-solid fa-user"></i></button>
+    </a>
+      <button id="abrir-carrinho" class="mx-2"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+   </header>
+
+   <main class="flex flex-col items-center">
+    <section id="filtros" class="p-8 flex">
+      
+      <div class="mx-2">
+        <input id="todos" type="radio" name="filtro" class="peer hidden" checked>
+        <label for="todos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none">Todos</label>
+      </div>
+
+      <div class="mx-2">
+        <input id="tiro" type="radio" name="filtro" class="peer hidden">
+        <label for="tiro" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none">Tiro</label>
+      </div> 
+
+      <div class="mx-2">
+        <input id="futebol" type="radio" name="filtro" class="peer hidden">
+        <label for="futebol" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none">Futebol</label>
+      </div>
+
+      <div class="mx-2">
+        <input id="aventura" type="radio" name="filtro" class="peer hidden">
+        <label for="aventura" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none">Aventura</label>
+      </div>
+
+    </section>
+    
+    <section id="container-produto" class="flex flex-wrap gap-4 justify-center"></section>
+   
+  </main>
+
+  <script type="module" src="./main.js"></script>
+  
+  </body>
+  
+</html>

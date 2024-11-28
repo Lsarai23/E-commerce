@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body class="bg-slate-200 flex flex-col h-screen">
+
+   <header class="flex bg-orange-600 shadow-orange-400 shadow-lg p-8 justify-between sticky top-0 z-10">
+    <a href="/">
+    <img class="h-8" src="./assets/img/logo.png" alt="logo">
+    </a>
+   </header>
+   <form class="flex w-100 px-5 gap-4 py-10 grow">
+        <section id="dados-usuario" class="w-1/3 bg-slate-300">
+            <p class="mb-5 text-center">Seus Dados</p>
+            <div class="flex flex-col px-10 py-5">
+                <label for="nome" class="font-bold text-sm mb-5">Nome</label>
+                <input type="text" id="nome" class="rounded-sm py-1" placeholder="Nome Completo" required>
+            </div>
+            <div class="flex flex-col px-10 py-5">
+                <label for="email" class="font-bold text-sm mb-5">Email</label>
+                <input type="email" id="email" class="rounded-sm py-1" placeholder="aa.bb@gmail.com" required>
+            </div>
+            <div class="flex flex-col px-10 py-5">
+                <label for="tel" class="font-bold text-sm mb-5">Telefone de Contato</label>
+                <input type="tel" id="tel" class="rounded-sm py-1" placeholder="(DDD) 91111-1111" required>
+            </div>
+        </section>
+        <section id="dados-pagamento" class="w-1/3 bg-slate-300" >
+            <p class="mb-5 text-center">Pagamento e Entrega</p>
+            <div class="flex flex-col px-10 py-5">
+                <label for="cartao-numero" class="font-bold text-sm mb-5">Número do Cartão</label>
+                <input type="number" id="cartao-numero" class="rounded-sm py-1" placeholder="1111 1111 1111 1111" required>
+            </div>
+            <div class="flex">
+                <div class="flex flex-col px-10 py-5 w-1/2">
+                    <label for="cvv" class="font-bold text-sm mb-5">CVV</label>
+                    <input type="number" id="cvv" class="rounded-sm py-1" placeholder="111" required>
+                </div>
+                <div class="flex flex-col px-10 py-5 w-1/2">
+                    <label for="dv" class="font-bold text-sm mb-5">Data de Validade</label>
+                    <input type="number" id="dv" class="rounded-sm py-1" placeholder="111" required>
+                </div>
+            </div>
+                
+                    <div class="flex flex-col px-10 py-5">
+                        <label for="r" class="font-bold text-sm mb-5">Rua</label>
+                        <input type="text" id="r" class="rounded-sm py-1" placeholder="R.Nome" required>
+                    </div>
+                    <div class="flex">
+                        <div class="flex flex-col px-10 py-5 w-1/2">
+                            <label for="n" class="font-bold text-sm mb-5">Número</label>
+                            <input type="number" id="n" class="rounded-sm py-1" placeholder="0000" required>
+                        </div>
+                        <div class="flex flex-col px-10 py-5 w-1/2">
+                            <label for="ap" class="font-bold text-sm mb-5">Complemento</label>
+                            <input type="number" id="ap" class="rounded-sm py-1" placeholder="000" required>
+                        </div>
+                    </div>
+                
+           
+        </section>
+        <section id="produtos-checkout" class="w-1/3 bg-slate-300" >
+            <section id="produtos-carrinho" class="h-3/4 overflow-y-auto p-2"></section>
+            <section id="celula-finalizar" class="flex flex-col p-2 justify-between h-1/5 justify-around">
+                <p id="preco-total" class="text-green-600 text-xl bg-orange-100 rounded-lg"></p>
+                <button class="bg-amber-500 hover:bg-slate-200" type="submit"> Finalizar Compra</button>
+            </section>
+        </section>
+   </form>
+   <script src="./checkout.js" type="module"></script>
+  </body>
+</html>
